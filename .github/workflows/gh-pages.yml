@@ -27,7 +27,7 @@ jobs:
     - name: build_and_deploy
       uses: JamesIves/github-pages-deploy-action@master
       env:
-        ACCESS_TOKEN: ${{secrets.BOLG_ACCESS_TOKEN}
+        ACCESS_TOKEN: ${{secrets.BOLG_ACCESS_TOKEN}}
         BRANCH: gh-pages
         FOLDER: ./docs/.vuepress/dist
         BUILD_SCRIPT: yarn install && yarn doc:build
