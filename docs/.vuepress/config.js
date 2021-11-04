@@ -1,11 +1,10 @@
 /*
  * @Date: 2021-11-04 16:12:42
  * @LastEditors: 曾令宇
- * @LastEditTime: 2021-11-04 17:12:06
- * @FilePath: /blog/docs/.vuepress/config.js
+ * @LastEditTime: 2021-11-04 17:17:32
+ * @FilePath: /zly981026.github.io/docs/.vuepress/config.js
  */
 module.exports = {
-    base: '/blog/',
     title: '就随便写写',
     markdown: {
         toc: { includeLevel: [2, 3, 4] }
