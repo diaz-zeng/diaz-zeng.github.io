@@ -21,13 +21,15 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - name: checkout
+    - name: Checkout
       uses: actions/checkout@v2
 
-    - name: build_and_deploy
+    - name: Install and build 
+      run: yarn install && yarn doc:build
+
+    - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.5
-      env:
-        ACCESS_TOKEN: ${{secrets.BOLG_ACCESS_TOKEN}}
-        BRANCH: gh-pages
-        FOLDER: ./docs/.vuepress/dist
-        BUILD_SCRIPT: yarn install && yarn doc:build
+      with:
+        branch: gh-pages # The branch the action should deploy to.
+        folder: ./docs/.vuepress/dist # The folder the action should deploy.
+        token: ${{secrets.BLOG_ACCESS_TOKEN}}
