@@ -6,6 +6,6 @@
 
 ## 关于作者
 
-作者是一个勤（zheng）劳（ri）工（mo）作（yu）的互联网民工、在某知名大厂外包（主要是为了学习，感受氛围）、咖啡爱好者（全靠咖啡续命才能写下去）、重度拖延症患者（所以这个博客不怎么更新也是可以理解的），绝大多数时间躺平术，不定时踌躇满志，偶尔研究前沿技术（也可能是不怎么前沿）。😂
+作者是一个勤（zheng）劳（ri）工（mo）作（yu）的互联网民工、在某知名大厂外包（主要是为了学习，感受氛围）、咖啡爱好者（全靠咖啡续命才能写下去）、重度拖延症患者（所以这个博客不怎么更新也是可以理解的），绝大多数时间躺平，不定时踌躇满志，偶尔研究前沿技术（也可能是不怎么前沿）。😂
 
 [![Published to GitHub Pages](https://github.com/zly981026/zly981026.github.io/actions/workflows/gh-pages.yml/badge.svg?branch=master)](https://github.com/zly981026/zly981026.github.io/actions/workflows/gh-pages.yml)
