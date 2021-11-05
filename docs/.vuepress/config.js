@@ -1,7 +1,7 @@
 /*
  * @Date: 2021-11-04 16:12:42
  * @LastEditors: 曾令宇
- * @LastEditTime: 2021-11-05 17:08:55
+ * @LastEditTime: 2021-11-05 17:41:22
  * @FilePath: /zly981026.github.io/docs/.vuepress/config.js
  */
 module.exports = {
@@ -15,9 +15,15 @@ module.exports = {
         nav: [
             { text: "GitHub", link: 'https://github.com/zly981026', target: '_blank' },
             { text: "Issues", link: 'https://github.com/zly981026/zly981026.github.io/issues', target: '_blank' },
-        ]
-    }, sidebar: {
-        collapsable: false,
-        sidebarDepth: 2
+        ],
+        sidebar: [{
+            title: '目录',
+            collapsable: false,
+            sidebarDepth: 2,
+            children: [
+                '',
+                'java2go/'
+            ]
+        }]
     }
 }
