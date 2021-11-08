@@ -1,7 +1,7 @@
 /*
  * @Date: 2021-11-04 16:12:42
  * @LastEditors: 曾令宇
- * @LastEditTime: 2021-11-05 17:41:22
+ * @LastEditTime: 2021-11-08 12:00:10
  * @FilePath: /zly981026.github.io/docs/.vuepress/config.js
  */
 module.exports = {
@@ -22,7 +22,7 @@ module.exports = {
             sidebarDepth: 2,
             children: [
                 '',
-                'java2go/'
+                // 'java2go/'
             ]
         }]
     }
