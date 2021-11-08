@@ -1,9 +1,9 @@
 name: Push to Gitee
 on:
-  push:
-    branches: [ gh-pages ]
-  pull_request:
-    branches: [ gh-pages ]
+  workflow_run:
+    workflows: ["Published to GitHub Pages"]
+    types:
+    - completed
 jobs:
   push-to-gitee:
     runs-on: ubuntu-latest
