@@ -14,4 +14,4 @@ jobs:
        uses: actions/checkout@v2
 
      - name: Run push scripts
-       run: ./baiduPush.sh
+       run: sudo chmod+x ./baiduPush.sh && sudo ./baiduPush.sh
