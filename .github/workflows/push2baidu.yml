@@ -1,0 +1,17 @@
+name: Push to Baidu
+on:
+  workflow_run:
+    workflows: ["Published to GitHub Pages"]
+    types:
+    - completed
+jobs:
+  push-to-baidu:
+    runs-on: ubuntu-latest
+    name: "Push to Baidu"
+
+    steps: 
+     - name: Checkout
+       uses: actions/checkout@v2
+
+     - name: Run push scripts
+       run: ./baiduPush.sh
