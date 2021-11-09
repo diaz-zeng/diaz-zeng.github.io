@@ -13,5 +13,8 @@ jobs:
      - name: Checkout
        uses: actions/checkout@v2
 
-     - name: Run push scripts
-       run: sudo chmod +x ./baiduPush.sh && sudo ./baiduPush.sh
+     - name: Pull & Install
+       run: git pull && yarn install
+       
+     - name: Push to Baidu
+       run: yarn baiduPush
