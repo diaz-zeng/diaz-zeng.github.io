@@ -25,6 +25,10 @@ jobs:
         branch: gh-pages 
         folder: ./docs/.vuepress/dist 
         token: ${{secrets.BLOG_ACCESS_TOKEN}}
+    
+    # 推送站点信息到百度以减少爬虫检索时间
+    - name: Push to Baidu
+      run: yarn baiduPush
 
   # 推送构建物到Gitee仓库
   push-to-gitee:
@@ -40,17 +44,4 @@ jobs:
        run: git fetch && git checkout gh-pages && git pull
 
      - name: Push to gitee
-       run: git push -f https://oauth2:${{secrets.GITEE_TOKEN}}@gitee.com/diaz/diaz.git:master
-
-  # 推送站点信息到百度以减少爬虫检索时间
-  push-to-baidu:
-    needs: build-and-deploy
-    runs-on: ubuntu-latest
-    name: "Push to Baidu"
-
-    steps: 
-     - name: Switch branch
-       run: git checkout master
-
-     - name: Push to Baidu
-       run: yarn baiduPush
+       run: git push -f https://oauth2:${{secrets.GITEE_TOKEN}}@gitee.com/diaz/diaz.git master
