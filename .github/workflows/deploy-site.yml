@@ -1,0 +1,56 @@
+name: Deploy Site
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  # 部署到GitHub Pages
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    name: "build and deploy"
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Install and build 
+      run: yarn install && yarn docs:build
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.5
+      with:
+        branch: gh-pages 
+        folder: ./docs/.vuepress/dist 
+        token: ${{secrets.BLOG_ACCESS_TOKEN}}
+
+  # 推送构建物到Gitee仓库
+  push-to-gitee:
+    needs: build-and-deploy
+    runs-on: ubuntu-latest
+    name: "Push to Gitee"
+
+    steps: 
+     - name: Checkout
+       uses: actions/checkout@v2
+
+     - name: Switch branch
+       run: git fetch && git checkout gh-pages && git pull
+
+     - name: Push to gitee
+       run: git push -f https://oauth2:${{secrets.GITEE_TOKEN}}@gitee.com/diaz/diaz.git:master
+
+  # 推送站点信息到百度以减少爬虫检索时间
+  push-to-baidu:
+    needs: build-and-deploy
+    runs-on: ubuntu-latest
+    name: "Push to Baidu"
+
+    steps: 
+     - name: Switch branch
+       run: git checkout master
+
+     - name: Push to Baidu
+       run: yarn baiduPush

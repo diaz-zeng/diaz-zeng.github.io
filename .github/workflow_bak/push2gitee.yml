@@ -18,8 +18,5 @@ jobs:
      - name: Switch branch
        run: git fetch && git checkout gh-pages && git pull
 
-     - name: Add Remote
-       run: git remote add gitee https://oauth2:${{secrets.GITEE_TOKEN}}@gitee.com/diaz/diaz.git
-
      - name: Push to gitee
-       run: git push gitee
+       run: git push -f https://oauth2:${{secrets.GITEE_TOKEN}}@gitee.com/diaz/diaz.git:master
