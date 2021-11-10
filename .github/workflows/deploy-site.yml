@@ -44,4 +44,4 @@ jobs:
        run: git fetch && git checkout gh-pages && git pull
 
      - name: Push to gitee
-       run: git push -f https://oauth2:${{secrets.GITEE_TOKEN}}@gitee.com/diaz/diaz.git master
+       run: git push -f https://oauth2:${{secrets.GITEE_TOKEN}}@gitee.com/diaz/diaz.git gh-pages:master
