@@ -1,7 +1,7 @@
 /*
  * @Date: 2021-11-09 17:09:57
  * @LastEditors: 曾令宇
- * @LastEditTime: 2021-11-11 17:28:13
+ * @LastEditTime: 2021-11-11 17:46:16
  * @FilePath: /diaz-zeng.github.io/docs/.vuepress/config/plugins.js
  */
 // 插件配置
@@ -83,7 +83,9 @@ module.exports = [
     {
       transformer: (timestamp, lang) => {
         const dayjs = require('dayjs') // https://day.js.org/
-        return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss')
+        const d = dayjs(timestamp);
+        d.utcOffset(480)
+        return d.format('YYYY/MM/DD, HH:mm:ss')
       },
     },
   ],
