@@ -1,8 +1,8 @@
 /*
  * @Date: 2021-11-09 17:09:57
  * @LastEditors: 曾令宇
- * @LastEditTime: 2021-11-09 17:14:23
- * @FilePath: /zly981026.github.io/docs/.vuepress/config/themeConfig.js
+ * @LastEditTime: 2021-11-11 17:20:57
+ * @FilePath: /diaz-zeng.github.io/docs/.vuepress/config/themeConfig.js
  */
 const nav = require('./nav.js');
 // const sidebar = require('./sidebar.js');
@@ -49,7 +49,7 @@ module.exports = {
 
   author: {
     // 文章默认的作者信息，可在md文件中单独配置此信息 String | {name: String, link: String}
-    name: 'diaz-zeng', // 必需
+    name: 'Diaz Zeng', // 必需
     link: 'https://github.com/diaz-zeng', // 可选的
   },
   social: {
@@ -67,6 +67,6 @@ module.exports = {
     // 页脚信息
     createYear: 2021, // 博客创建年份
     copyrightInfo:
-      'Evan Xu | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签
+      'Diaz Zeng ', // 博客版权信息，支持a标签
   },
 }

@@ -1,8 +1,8 @@
 /*
  * @Date: 2021-11-09 17:09:57
  * @LastEditors: 曾令宇
- * @LastEditTime: 2021-11-09 17:29:50
- * @FilePath: /zly981026.github.io/docs/.vuepress/config/plugins.js
+ * @LastEditTime: 2021-11-11 17:28:13
+ * @FilePath: /diaz-zeng.github.io/docs/.vuepress/config/plugins.js
  */
 // 插件配置
 module.exports = [
@@ -32,8 +32,8 @@ module.exports = [
           frontUrl: 'https://cn.bing.com/search?q=',
         },
         {
-          title: '通过百度搜索本站的',
-          frontUrl: 'https://www.baidu.com/s?wd=site%3Axugaoyi.com%20',
+          title: '通过百度搜索',
+          frontUrl: 'https://www.baidu.com/s?wd=',
         },
       ],
     },
