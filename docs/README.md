@@ -1,5 +1,7 @@
 # 关于
 
+[![Deploy Site](https://github.com/diaz-zeng/diaz-zeng.github.io/actions/workflows/deploy-site.yml/badge.svg?branch=master)](https://github.com/diaz-zeng/diaz-zeng.github.io/actions/workflows/deploy-site.yml)
+
 ## Hi everyone
 
 首先，欢迎你的访问。这个博客主要是记录我在不断学习和工作的过程中所遇到的一些有趣的问题、一闪而过的想法以及不太成熟的创意。因为作者在工作和生活中时不时的会有一些特别的想法或者解决一些有意思的问题，但是却没办法全部记住，往往到最后就不了了之。所以希望以这种方式来记录可以帮助到我，同时也把它们分享出来。
@@ -9,5 +11,3 @@
 ## 关于作者
 
 作者是一个勤（zheng）劳（ri）工（mo）作（yu）的互联网民工、在某知名大厂外包（主要是为了学习，感受氛围）、咖啡爱好者（全靠咖啡续命才能写下去）、重度拖延症患者（所以这个博客不怎么更新也是可以理解的），绝大多数时间躺平，不定时踌躇满志，偶尔研究前沿技术（也可能是不怎么前沿）。😂
-
-[![Published to GitHub Pages](https://github.com/zly981026/zly981026.github.io/actions/workflows/gh-pages.yml/badge.svg?branch=master)](https://github.com/zly981026/zly981026.github.io/actions/workflows/gh-pages.yml)
