@@ -6,7 +6,7 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "baiduPush": "node utils/baiduPush.js https://diaz-zeng.github.io && bash baiduPush.sh"
+    "baiduPush": "bash baiduPush.sh"
   },
   "devDependencies": {
     "dayjs": "^1.9.7",
