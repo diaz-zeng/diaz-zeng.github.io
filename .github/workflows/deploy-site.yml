@@ -59,7 +59,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        
+
       - name: Install
         run: yarn install
 
@@ -67,5 +67,5 @@ jobs:
         run: yarn baiduPush https://diaz-zeng.github.io ${{secrets.BAIDU_PUSH_TOKEN}}
 
       - name: Push Gitee Info
-        if: ${{push-to-gitee.status === 'success'}}
+        if: ${{needs.push-to-gitee.status == 'success'}}
         run: yarn baiduPush https://diaz.gitee.io ${{secrets.BAIDU_PUSH_TOKEN}}
