@@ -67,5 +67,5 @@ jobs:
         run: yarn baiduPush https://diaz-zeng.github.io ${{secrets.BAIDU_PUSH_TOKEN}}
 
       - name: Push Gitee Info
-        if: ${{needs.push-to-gitee.status == 'success'}}
+        if: ${{success(needs.push-to-gitee.status)}}
         run: yarn baiduPush https://diaz.gitee.io ${{secrets.BAIDU_PUSH_TOKEN}}
