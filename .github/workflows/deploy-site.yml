@@ -49,6 +49,7 @@ jobs:
           gitee-password: ${{secrets.GITEE_PASSWORD}}
           gitee-repo: diaz/diaz
           branch: master
+          https: true
   # 推送站点信息到百度以减少爬虫检索时间
   push-to-baidu:
     needs: [build-and-deploy, push-to-gitee]
