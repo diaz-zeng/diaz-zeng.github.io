@@ -23,7 +23,7 @@ jobs:
       
       - uses: actions/setup-node@v3
         with:
-          node-version: lts/iron
+          node-version: lts/gallium
           registry-url: https://registry.npmjs.org/
           cache: pnpm
 
