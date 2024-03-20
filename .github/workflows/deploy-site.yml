@@ -16,8 +16,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install and build
-        run: yarn install && yarn docs:build
+      - uses: actions/setup-node@v3
+        with:
+          node-version: lts/iron
+          registry-url: https://registry.npmjs.org/
+          cache: pnpm
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: true
+
+      - name: Build docs
+        run: pnpm run docs:build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
