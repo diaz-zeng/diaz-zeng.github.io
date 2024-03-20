@@ -4,7 +4,10 @@ on:
   push:
     branches: [master]
   pull_request:
-    branches: [master]
+    types: 
+      - closed
+    branches: 
+      - master
 
 jobs:
   # 部署到GitHub Pages
@@ -16,17 +19,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: lts/iron
-          registry-url: https://registry.npmjs.org/
-          cache: pnpm
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 8
           run_install: true
+      
+      - uses: actions/setup-node@v3
+        with:
+          node-version: lts/iron
+          registry-url: https://registry.npmjs.org/
+          cache: pnpm
 
       - name: Build docs
         run: pnpm run docs:build
