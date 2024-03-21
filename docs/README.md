@@ -15,7 +15,3 @@
 ## 无法评论？
 
 通过gitee.io域名访问的朋友请转到[github.io](https://diaz-zeng.github.io)进行访问。
-
-### Github无法登录？
-
-搭个梯子？
