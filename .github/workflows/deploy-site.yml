@@ -14,21 +14,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: false
+
       - uses: actions/setup-node@v3
         with:
           node-version: lts/gallium
           registry-url: https://registry.npmjs.org/
           cache: pnpm
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-          run_install: |
-            arges: [--no-frozen-lockfile]
-
       - name: Build docs
-        run: pnpm i --no-frozen-lockfile & pnpm run docs:build
+        run: pnpm i --no-frozen-lockfile && pnpm run docs:build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
