@@ -89,4 +89,18 @@ module.exports = [
       },
     },
   ],
+  [
+    'vuepress-plugin-comment',
+    {
+      choosen: 'gitalk',
+      options: {
+        clientID: '7c3174848f4ed5871ec9',
+        clientSecret: 'bcde9e55f381cf29765e7117a0229ab0f805db39',
+        repo: 'diaz-zeng.github.io.commemts',
+        owner: 'diaz-zeng',
+        admin: ['diaz-zeng'],
+        distractionFreeMode: false,
+      }
+    }
+  ]
 ]
