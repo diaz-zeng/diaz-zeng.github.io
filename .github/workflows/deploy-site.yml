@@ -52,14 +52,14 @@ jobs:
       - name: Push to gitee
         run: git push -f https://oauth2:${{secrets.GITEE_TOKEN}}@gitee.com/diaz/diaz.git gh-pages:master
 
-      - name: Refresh Gitee pages
-        uses: yanglbme/gitee-pages-action@main
-        with:
-          gitee-username: ${{secrets.GITEE_USERNAME}}
-          gitee-password: ${{secrets.GITEE_PASSWORD}}
-          gitee-repo: diaz/diaz
-          branch: master
-          https: true
+      # - name: Refresh Gitee pages
+      #   uses: yanglbme/gitee-pages-action@main
+      #   with:
+      #     gitee-username: ${{secrets.GITEE_USERNAME}}
+      #     gitee-password: ${{secrets.GITEE_PASSWORD}}
+      #     gitee-repo: diaz/diaz
+      #     branch: master
+      #     https: true
   # 推送站点信息到百度以减少爬虫检索时间
   push-to-baidu:
     needs: [build-and-deploy, push-to-gitee]
