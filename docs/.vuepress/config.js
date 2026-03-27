@@ -12,7 +12,7 @@ const themeConfig = require('./config/themeConfig.js');
 
 module.exports = {
     theme: 'vdoing', // 使用 vdoing 主题
-    title: '没有好名字', locales: {
+    title: "Diaz's Blog", locales: {
         // 键名是该语言所属的子路径
         // 作为特例，默认语言可以使用 '/' 作为其路径。
         '/': {
