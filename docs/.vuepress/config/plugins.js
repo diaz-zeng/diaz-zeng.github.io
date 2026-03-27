@@ -7,6 +7,7 @@
 // 插件配置
 module.exports = [
   'vuepress-plugin-baidu-autopush', // 百度自动推送
+  'vuepress-plugin-mermaidjs', // Mermaid 图表渲染
 
   // 可以添加第三方搜索链接的搜索框（原官方搜索框的参数仍可用）
   [
